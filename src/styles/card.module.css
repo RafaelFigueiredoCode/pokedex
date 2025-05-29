@@ -1,0 +1,22 @@
+.card {
+  display: flex;
+  flex-direction: column; /* coloca os itens um embaixo do outro */
+  align-items: center;    /* centraliza horizontalmente */
+  text-align: center;
+  padding: 1rem;
+  border: 1px solid black;
+  border-radius: 8px;
+  margin: 10px 15px 10px 13px;
+  cursor: pointer;
+  background-color: rgba(151, 151, 151, 0.795);
+  
+}
+.card img {
+  width: 163px;
+  height: 163px;
+  object-fit: contain;
+  margin-bottom: 0.5rem;
+}
+.card:hover{
+      transform: scale(1.05);
+}
