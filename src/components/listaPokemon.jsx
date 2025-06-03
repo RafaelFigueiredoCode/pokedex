@@ -1,8 +1,6 @@
-
+import { Link } from 'react-router-dom';
 import PokemonCard from './cardPokemon.jsx';
 import styles from '../styles/pokedex.module.css'
-
-import { Link } from 'react-router-dom';
 
 const PokemonList = ({ pokemons }) => {
   return (
@@ -22,3 +20,4 @@ const PokemonList = ({ pokemons }) => {
 };
 
 export default PokemonList
+
