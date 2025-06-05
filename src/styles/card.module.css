@@ -1,22 +1,22 @@
 .card {
-  display: flex;
-  flex-direction: column; /* coloca os itens um embaixo do outro */
-  align-items: center;    /* centraliza horizontalmente */
+  background-color: rgba(158, 151, 151, 0.678);
+  border: 2px solid #eee;
+  border-radius: 12px;
+  padding: 12px;
+  width: 140px;
   text-align: center;
-  padding: 1rem;
-  border: 1px solid black;
-  border-radius: 8px;
-  margin: 10px 15px 10px 13px;
-  cursor: pointer;
-  background-color: rgba(151, 151, 151, 0.795);
-  
+  transition: all 0.3s ease;
 }
+
 .card img {
-  width: 163px;
-  height: 163px;
-  object-fit: contain;
-  margin-bottom: 0.5rem;
+  width: 100px;
+  height: auto;
+  margin-bottom: 8px;
 }
-.card:hover{
-      transform: scale(1.05);
+
+.card p {
+  font-size: 1rem;
+  color: #333;
+  text-transform: capitalize;
+  font-weight: bold;
 }

@@ -17,7 +17,7 @@ function Home() {
   const fetchAllPokemons = async () => {
     try {
       setLoading(true);
-      const response = await pokeApi.get('/pokemon?limit=970'); 
+      const response = await pokeApi.get('/pokemon?limit=800'); 
       setPokemons(response.data.results);
     } catch (error) {
       console.error('Erro ao buscar todos os pokémons:', error);
@@ -95,8 +95,10 @@ function Home() {
   return (
     <div className={styles.home}>
       <h1>Pokedex</h1>
+      <div className= {styles.filters}>
       <TypeFilter onTypeChange={handleTypeChange} />
       <RegionFilter onRegionChange = {handleRegionChange}/>
+      </div>
       <input
         type="search"
         placeholder="Pesquisar Pokémon..."
