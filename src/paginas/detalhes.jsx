@@ -92,5 +92,6 @@ const DetalhePokemon = () => {
       
     </div>
   );
+ }
 }
 export default DetalhePokemon;
