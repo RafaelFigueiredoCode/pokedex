@@ -63,10 +63,14 @@ const DetalhePokemon = () => {
   const handleImgClick = (name) => {
     navigate(`/pokemons/${name}`)
   };
+  const handleVoltarClick = () => {
+    navigate('/')
+
   
 
   return (
     <div className= {styles.div}>
+    <p onClick ={handleVoltarClick} className= {styles.voltar}>Voltar Para o Inicio</p>
       <h1>{pokemon.name}</h1>
       <img src={`https://img.pokemondb.net/sprites/home/normal/${pokemon.name}.png`} alt={pokemon.name} />
       <p><strong>Altura:</strong> {pokemon.height} decímetros</p>

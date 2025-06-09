@@ -68,3 +68,8 @@ p strong {
   height: auto;
   margin-bottom: 8px;
 }
+.voltar:hover{
+  color: blue;
+  transform: scale(1.05);
+  cursor: pointer;
+}
