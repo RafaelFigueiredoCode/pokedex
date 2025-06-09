@@ -65,6 +65,7 @@ const DetalhePokemon = () => {
   };
   const handleVoltarClick = () => {
     navigate('/')
+  };
 
   
 
@@ -92,6 +93,5 @@ const DetalhePokemon = () => {
       
     </div>
   );
- }
 }
 export default DetalhePokemon;
