@@ -18,3 +18,36 @@
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
   color: black;
 }
+
+
+
+@media (max-width: 1024px) {
+  .layout {
+    gap: 12px;
+    padding: 4px;
+  }
+}
+
+@media (max-width: 768px) {
+  .layout {
+    gap: 10px;
+    padding: 6px;
+  }
+
+  .layout > * {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .layout {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 8px;
+    padding: 8px;
+  }
+
+  .link {
+    font-size: 0.95rem;
+  }
+}

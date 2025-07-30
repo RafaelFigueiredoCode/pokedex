@@ -1,6 +1,7 @@
 .div {
-  width: 700px;
-  margin-left: 420px;
+  width: 90%;
+  max-width: 700px;
+  margin: 0 auto;
   padding: 24px;
   background-color: #a0a4a8;
   border-radius: 12px;
@@ -10,9 +11,10 @@
 }
 
 h1 {
-  font-size: 2.5rem;
-  color: #333;
-  margin-bottom: 16px;
+  font-size: 3rem;
+  color: #e3350d;
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 2px #aaa;
   text-transform: capitalize;
 }
 
@@ -23,7 +25,7 @@ img {
 }
 
 p {
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: #555;
   margin: 8px 0;
 }
@@ -53,7 +55,8 @@ p strong {
   border: 1px solid #ddd;
   border-radius: 8px;
   padding: 12px;
-  width: 120px;
+  width: 100%;
+  max-width: 120px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
 }
@@ -68,7 +71,8 @@ p strong {
   height: auto;
   margin-bottom: 8px;
 }
-.voltar:hover{
+
+.voltar:hover {
   color: blue;
   transform: scale(1.05);
   cursor: pointer;
