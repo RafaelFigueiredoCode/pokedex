@@ -1,11 +1,13 @@
 .card {
-  background-color: #ddd;
-  border-radius: 10px;
+  background-color: rgba(158, 151, 151, 0.678);
+  border: 2px solid #eee;
+  border-radius: 12px;
   padding: 1rem;
   width: 100%;
-  max-width: 160px;
+  max-width: 140px;
   text-align: center;
-  margin: 10px auto;
+  transition: all 0.3s ease;
+  margin-left: -20px;
 }
 
 .card img {

@@ -1,7 +1,7 @@
 .layout {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 15px;
+  gap: 11px;
   padding: 2px;
   width: 100%;
   justify-items: center;
@@ -9,13 +9,12 @@
 
 .link {
   text-decoration: none;
-  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  
   color: black;
 }
 
 .link:hover {
   transform: scale(1.05);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
   color: black;
 }
 
