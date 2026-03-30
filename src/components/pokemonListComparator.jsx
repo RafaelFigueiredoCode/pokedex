@@ -2,18 +2,19 @@ import { Link } from 'react-router-dom';
 import PokemonCard from './cardPokemon.jsx';
 import styles from '../styles/pokedex.module.css'
 
-const PokemonList = ({ pokemons }) => {
+const PokemonListComparator = ({ pokemons, PokemonSelecionado }) => {
 
   return (
     <div className= {styles.layout}>
       {pokemons.map((pokemon) => {
         return (
-        <Link className={styles.link} key={pokemon.name} to={`/pokemons/${pokemon.name}`}>
         <PokemonCard
+        key={pokemon.name}
+        classname={styles.link}
         name={pokemon.name}
         imageUrl={`https://img.pokemondb.net/sprites/home/normal/${pokemon.name}.png`}
+        onClick={() => PokemonSelecionado(pokemon)}
         />
-        </Link>
         );
       })}
     </div>
@@ -22,5 +23,4 @@ const PokemonList = ({ pokemons }) => {
   
 };
 
-export default PokemonList
-
+export default PokemonListComparator
