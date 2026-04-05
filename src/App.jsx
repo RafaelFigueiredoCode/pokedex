@@ -1,7 +1,6 @@
 import Home from './paginas/home.jsx'
 import DetalhePokemon from './paginas/detalhes.jsx'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import styles from './styles/detalhes.module.css'
 import Comparator from './paginas/comparator.jsx';
 
 
