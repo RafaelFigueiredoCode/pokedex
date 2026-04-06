@@ -3,7 +3,6 @@ import pokeApi from '../api/pokeApi.jsx';
 import PokemonListComparator from '../components/pokemonListComparator.jsx';
 import PokemonCard from "../components/cardPokemon.jsx";
 import { vantagens } from "../components/vantagens.jsx";
-import { useActionData } from "react-router-dom";
 
 export default function Comparator(){
 
@@ -13,7 +12,7 @@ export default function Comparator(){
     const [searchTerm, setSearchTerm] = useState('');
     const [pokemon1, setPokemon1] = useState(null)
     const [pokemon2, setPokemon2] = useState(null)
-    const [resultado, setResultado] = useState(null)
+    const [resultado, setResultado] = useState('')
 
 
     const fetchAllPokemons = async () => {
@@ -53,26 +52,35 @@ try {
   }
 };
 
-const handleClickBattle = () =>  {
-    if (!pokemon1 || !pokemon2) {
-    return 'Selecione dois pokémons';
+const handleClickBattle = () => {
+  if (!pokemon1 || !pokemon2) {
+    setResultado('Selecione dois pokémons');
+    return;
   }
-  const tipo1 = pokemon1.types?.[0]?.type.name;
-  const tipo2 = pokemon2.types?.[0]?.type.name;
-{
-if (vantagens[tipo1]?.includes(tipo2)) {
-  setResultado = `${tipo1} é super eficaz contra ${tipo2}`;
-  return;
-}
-if (vantagens[tipo2]?.includes(tipo1)) {
-  setResultado = `${tipo2} é super eficaz contra ${tipo1}`;
-  return;
-}
-setResultado('Empate!')
- }
-}
 
+  const tipos1 = pokemon1.types.map(t => t.type.name);
+  const tipos2 = pokemon2.types.map(t => t.type.name);
 
+  const isSuperEfetivo = (atacante, defensor) => {
+    return atacante.some(tipoAtk =>
+      defensor.some(tipoDef =>
+        vantagens[tipoAtk]?.includes(tipoDef)
+      )
+    );
+  };
+
+  if (isSuperEfetivo(tipos1, tipos2)) {
+    setResultado(`${tipos1.join(', ')} é super eficaz contra ${tipos2.join(', ')}`);
+    return;
+  }
+
+  if (isSuperEfetivo(tipos2, tipos1)) {
+    setResultado(`${tipos2.join(', ')} é super eficaz contra ${tipos1.join(', ')}`);
+    return;
+  }
+
+  setResultado('Empate!');
+};
 
 return(
     <div>

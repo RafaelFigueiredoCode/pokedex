@@ -1,23 +1,22 @@
-export const  vantagens = {
-  fogo: ['planta', 'gelo', 'inseto', 'aco'],
-  agua: ['fogo', 'terra', 'pedra'],
-  planta: ['agua', 'terra', 'pedra'],
-  eletrico: ['agua', 'voador'],
+export const vantagens = {
+  fire: ['grass', 'ice', 'bug', 'steel'],
+  water: ['fire', 'ground', 'rock'],
+  grass: ['water', 'ground', 'rock'],
+  electric: ['water', 'flying'],
 
-  gelo: ['planta', 'terra', 'voador', 'dragao'],
-  lutador: ['normal', 'gelo', 'pedra', 'noturno', 'aco'],
-  veneno: ['planta', 'fada'],
-  terra: ['fogo', 'eletrico', 'veneno', 'pedra', 'aco'],
+  ice: ['grass', 'ground', 'flying', 'dragon'],
+  fighting: ['normal', 'ice', 'rock', 'dark', 'steel'],
+  poison: ['grass', 'fairy'],
+  ground: ['fire', 'electric', 'poison', 'rock', 'steel'],
 
-  voador: ['planta', 'lutador', 'inseto'],
-  psiquico: ['lutador', 'veneno'],
-  inseto: ['planta', 'psiquico', 'noturno'],
-  pedra: ['fogo', 'gelo', 'voador', 'inseto'],
+  flying: ['grass', 'fighting', 'bug'],
+  psychic: ['fighting', 'poison'],
+  bug: ['grass', 'psychic', 'dark'],
+  rock: ['fire', 'ice', 'flying', 'bug'],
 
-  fantasma: ['psiquico', 'fantasma'],
-  dragao: ['dragao'],
-  noturno: ['psiquico', 'fantasma'],
-  aco: ['gelo', 'pedra', 'fada'],
-
-  fada: ['lutador', 'dragao', 'noturno'],
-  }
+  ghost: ['psychic', 'ghost'],
+  dragon: ['dragon'],
+  dark: ['psychic', 'ghost'],
+  steel: ['ice', 'rock', 'fairy'],
+  fairy: ['fighting', 'dragon', 'dark'],
+};
